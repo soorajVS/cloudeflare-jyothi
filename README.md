@@ -1,32 +1,47 @@
-# React + TypeScript + Vite
+# NavaJyothi Health & Retreat
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Marketing site for NavaJyothi Health & Retreat, a Kerala Ayurveda, Yoga, and
+Philosophy wellness retreat. A single-page React + TypeScript site built with
+Vite and Tailwind CSS, deployed on Cloudflare Pages.
 
-Currently, two official plugins are available:
+Site copy is sourced from `NAVAJYOTHI_brochure.txt`. Real photography and
+contact details (address/phone/email/social) are still placeholders — see
+`src/components/PlaceholderImage.tsx` and `src/data/contact.ts`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Requirements
 
-## React Compiler
+- Node.js 24+ and npm
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Local development
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install   # install dependencies
+npm run dev   # start the Vite dev server with HMR at http://localhost:5173
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Build
+
+```bash
+npm run build   # type-check (tsc) and produce a production build in dist/
+```
+
+## Test the production build locally
+
+```bash
+npm run preview   # build, then serve dist/ via `wrangler pages dev`
+```
+
+## Deploy to Cloudflare Pages
+
+```bash
+npm run deploy   # build, then publish dist/ via `wrangler pages deploy`
+```
+
+Requires being logged in to Cloudflare (`npx wrangler login`) and having
+access to the `cloudeflare-jyothi` Pages project (see `wrangler.jsonc`).
+
+## Lint
+
+```bash
+npm run lint   # oxlint
+```
