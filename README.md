@@ -4,9 +4,8 @@ Marketing site for NavaJyothi Health & Retreat, a Kerala Ayurveda, Yoga, and
 Philosophy wellness retreat. A single-page React + TypeScript site built with
 Vite and Tailwind CSS, deployed on Cloudflare Pages.
 
-Site copy is sourced from `NAVAJYOTHI_brochure.txt`. Real photography and
-contact details (address/phone/email/social) are still placeholders — see
-`src/components/PlaceholderImage.tsx` and `src/data/contact.ts`.
+Real photography and contact details are still placeholders 
+— see `src/components/PlaceholderImage.tsx` and `src/data/contact.ts`.
 
 ## Requirements
 
